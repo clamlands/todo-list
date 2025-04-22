@@ -1,0 +1,185 @@
+body{
+    margin: 0;
+    color: white;
+    font-family: sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 300px 1fr;
+    height: 100vh;
+}
+
+.header{
+    grid-column: 1 / 3;
+    background-color: #202124;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    border-bottom: 2px solid #525356;
+}
+
+.projects-main{
+    background-color: #202124;
+    border-right: 2px solid #525356;
+}
+
+.sub-projects{
+    margin: 15px;
+}
+
+.project-title{
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.projects-list{
+    margin-left: 10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.new-project{
+    padding: 3px 5px;
+    border-radius: 8px;
+    height: 26px;
+}
+
+.new-project:hover{
+    background-color: #525356;
+}
+
+.project-input{
+    border: 2px solid #525356;
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 3px 5px;
+}
+
+.project-buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 7px;
+    gap: 10px;
+}
+
+.button{
+    background-color: #525356;
+    border-radius: 8px;
+    padding: 3px 15px;
+    width: 50%;
+    text-align: center;
+    user-select: none;
+}
+
+.add:hover{
+    background-color: rgba(0, 128, 0, 0.849);
+}
+
+.cancel:hover{
+    background-color: rgba(255, 0, 0, 0.596);
+}
+
+.project-tab{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    border-radius: 8px;
+}
+
+.project{
+    width: 100%;
+    padding: 3px 0;
+    height: 26px;
+}
+
+.project-tab:hover{
+    background-color: #525356;
+}
+
+.cross:hover{
+    color: red;
+    font-weight: 900;
+}
+
+.main{
+    background-color: #202124;
+    display: flex;
+    justify-content: center;
+}
+
+.sub-main{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+.main-input{
+    padding: 0 15px;
+    border-radius: 8px;
+    color: white;
+    border: 2px solid #c4c6cf;
+    margin-bottom: 20px;
+}
+
+.task-input{
+    height: 40px;
+    font-size: 18px;
+}
+
+.task-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #525356;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.task{
+    width: 100%;
+    padding: 10px 0;
+}
+
+.task-box:hover{
+    background-color: #525356;
+}
+
+.task-box .cross{
+    font-size: 20px;
+}
+
+input{
+    border: none;
+    outline: none;
+    background-color: #202124;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.task-edit{
+    padding: 10px 0;
+    font-size: 16px;
+    background-color: #525356;
+}
+
+::placeholder{
+    color:#c4c6cf;
+}
+
+.footer{
+    grid-column: 1 / 3;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

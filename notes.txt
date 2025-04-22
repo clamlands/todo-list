@@ -1,0 +1,62 @@
+todo-times are objects that with properties {
+    title
+    discription
+    due date
+    priority (boolean)
+}
+
+items can be placed into different categories ("projects")
+
+items should be able to be marked as completed and viewed in the project's "complete" folder
+items should also be able to be deleted outright
+be able to move items between projects
+
+
+
+
+
+SETUP USED FOR SUCCESSFUL DEV SERVER
+
+//CLI
+npm init -y
+npm install webpack webpack-cli --save-dev
+
+npm install --save-dev style-loader css-loader
+
+npm install --save-dev webpack-dev-server
+
+
+//webpack.config.js
+//no use of [name] for output
+//did not use runtimeChunk: 'single', since I only had one entry point
+//used development mode
+const path = require('path');
+
+module.exports = {
+  mode: 'development',
+  entry: './src/index.js',
+  devServer: {
+    static: './dist',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+};
+
+
+
+
+//package.json
+"private": true,
+
+"start": "webpack serve --open",
+"build": "webpack"
